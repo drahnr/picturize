@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+
+{% block title %}${ "Add Picture" | translate("picturize") }{% endblock %}
+
+{% block content %}
+	<h1>${ "Add Picture" | translate("picturize") }</h1>
+	<form id="add_pictures" class="split" action="{% admin "add_pictures" %}" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+		<fieldset>
+			<p>
+				<label for="name">${ "Name" | translate("picturize") }</label>
+				<input class="text" type="text" name="name" value="${ picturize.name | escape }" id="name" />
+			</p>
+			<p>
+				<label for="photo_field">${ "Photo" | translate("picturize") }</span>
+				</label>
+				<input class="file" type="file" name="photo" value="" id="photo_field" />
+				<span class="sub"><small>(${ "Max. file size: 32M | format: jpg, png, gif, bmp" | translate("picturize") })</small>
+			</p>
+			<p>
+				<label for="done"></label>
+				<button type="submit" name="add" class="yay">
+					<img src="$theme_url/images/icons/success.png" alt="update" />${ "Add" | translate("picturize") }</button>
+			</p>
+			<input type="hidden" name="hash" value="$site.secure_hashkey" id="hash" />
+		</fieldset>
+	</form>
+{% endblock %}

@@ -1,0 +1,70 @@
+# Chyrp v2.5 Translation File.
+# Copyright (C) 2012 The Chyrp Team
+# This file is distributed under the same license as the Chyrp v2.5 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chyrp v2.5\n"
+"Report-Msgid-Bugs-To: email@chyrp.net\n"
+"POT-Creation-Date: 2012-03-27 16:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FIRST LAST <EMAIL@EXAMPLE.COM>\n"
+"Language-Team: LANGUAGE <EMAIL@EXAMPLE.COM>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: modules/manage_pictures/info.yaml:1
+msgid "Picturize"
+msgstr ""
+
+#: modules/manage_pictures/info.yaml:4
+msgid "Allow you to manage all pictures contained in the upload folder in order to put them in your posts."
+msgstr ""
+
+#: modules/manage_pictures/info.yaml:10
+msgid "Please remember to update the permission settings for each group."
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/manage_pictures.twig:3
+msgid "Manage Picturize"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/manage_pictures.twig:6
+msgid "Manage Picturize"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/manage_pictures.twig:12
+msgid "Add Picture"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/manage_pictures.twig:31
+msgid "(No image available)"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/add_pictures.twig:3
+msgid "Add Picture"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/add_pictures.twig:6
+msgid "Add Picture"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/add_pictures.twig:10
+msgid "Name"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/add_pictures.twig:14
+msgid "Photo"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/add_pictures.twig:17
+msgid "Max. file size: 32M | format: jpg, png, gif, bmp"
+msgstr ""
+
+#: modules/manage_pictures/pages/admin/add_pictures.twig:22
+msgid "Add"
+msgstr ""

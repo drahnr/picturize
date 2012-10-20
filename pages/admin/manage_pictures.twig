@@ -1,0 +1,45 @@
+{% extends "layout.twig" %}
+
+{% block title %}${ "Manage Picturize" | translate("picturize") }{% endblock %}
+
+{% block content %}
+	<h1>${ "Manage Picturize" | translate("picturize") }</h1>
+	<form class="detail" action="index.php" method="get" accept-charset="utf-8">
+		<fieldset>
+			<input type="hidden" name="action" value="manage_picturize" />
+			{% if visitor.group.can("manage_picturize") %}
+			<a href="{% admin "add_pictures" %}" id="addbutton" class="button yay right"> 
+			<img src="$theme_url/images/icons/add.png" alt="add" /> ${ "Add Picture" | translate("picturize") }
+			</a>
+			{% endif %}
+		</fieldset>
+	</form>
+	<br />
+	{% if picturizeList.paginated and picturizeList.pages > 1 %}
+	<div class="pagination">
+		$picturizeList.prev_link
+		<span class="pages">${ "Page %d of %d" | translate | format(picturizeList.page, picturizeList.pages) }</span>
+		$picturizeList.next_link
+	</div>
+	<br />
+	{% endif %}
+	<div id="listing_pictures">
+	{% for picture in picturizeList.paginated %}
+		<div id="image${ picture.id | truncate }" class="picture">
+			<a href="{% admin "delete_pictures&url="~ picture.url %}" class="delete" title="delete">
+				<span>the delete icon</span></a>
+			<a href="${ picture.url | truncate }" target="_blank" class="link">
+				<img src="${ picture.cropurl }" alt="image${ picture.id | truncate }"/></a>
+			<div class="description">
+				<span class="url">${ picture.url | truncate }</span>
+			</div>
+		</div>
+	{% else %}
+		<div id="none_picture">
+			<span class="sub">${ "(No image available)" | translate("picturize") }</span>
+		</div>
+	{% endfor %}
+		<div style="clear:both;">
+		</div>
+	</div>
+{% endblock %}

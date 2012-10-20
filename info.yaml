@@ -1,0 +1,10 @@
+name: Picturize
+url: http://www.essomia.com/
+version: 1.0
+description: Allow you to manage all pictures contained in the upload folder in order to put them in your posts.
+author:
+  name: Essomia
+  url: http://www.essomia.com/
+conflicts:
+notifications:
+  - Please remember to update the permission settings for each group.
